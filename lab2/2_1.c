@@ -1,16 +1,16 @@
-//Вариант 6
 #include <stdio.h>
 
 int main(){
         int a;
-        printf("Введите число: ");
+        printf("введите год:");
         scanf("%d",&a);
-        for (int s=0,n=2; n<a; n++){
-                if (a%n==0){
-                        s=1;
-                        printf("Наименьший делитель: %d",n>
-                        break;
-                }
+        if (a%400 == 0){
+                printf("Весокосный");
+        } else if (a%100 == 0){
+                printf("Не весокосный");
+        } else if (a%4 == 0){
+                printf("Весокосный");
+        } else{
+                printf("Не весокосный");
         }
-
 }
