@@ -1,4 +1,4 @@
-//Вариант 11
+//Вариант 10
 #include <stdio.h>
 
 int main(){
