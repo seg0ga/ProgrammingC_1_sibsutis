@@ -1,19 +1,16 @@
+//Вариант 6
 #include <stdio.h>
 
 int main(){
-        int a,k,m;
-        printf("Введите число N: ");
+        int a;
+        printf("Введите число: ");
         scanf("%d",&a);
-        k = 1;
-        for (int i = 0; i<a;i++){
-                m=0;
-                while (m < a){
-                    if (a>3 && k<10)
-                        printf(" ");
-                    if (a>9 && k<100)
-                        printf(" ");
-                    printf("%d ",k);k++;m++;
+        for (int s=0,n=2; n<a; n++){
+                if (a%n==0){
+                        s=1;
+                        printf("Наименьший делитель: %d",n>
+                        break;
                 }
-                printf("\n");
         }
+
 }
