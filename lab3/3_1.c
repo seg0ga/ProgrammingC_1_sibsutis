@@ -8,9 +8,11 @@ int main(){
         for (int i = 0; i<a;i++){
                 m=0;
                 while (m < a){
-                        printf("%d ",k);
-                        k++;
-                        m++;
+                    if (a>3 && k<10)
+                        printf(" ");
+                    if (a>9 && k<100)
+                        printf(" ");
+                    printf("%d ",k);k++;m++;
                 }
                 printf("\n");
         }
