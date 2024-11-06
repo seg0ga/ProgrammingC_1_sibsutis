@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 //Заполнение матрицы
 void sozd_matrix(int stroka, int stolb, int matrix[stroka][stolb]) {
     for (int i = 0; i < stroka; i++) {
