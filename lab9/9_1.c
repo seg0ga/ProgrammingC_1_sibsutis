@@ -1,13 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-
-//Заполнение матрицы
+//Заполнение матрицы с клавиантуры
 void sozd_matrix(int stroka, int stolb, int matrix[stroka][stolb]) {
     for (int i = 0; i < stroka; i++) {
         for (int j = 0; j < stolb; j++) {
             printf("Введите %d %d элемент матрицы: ",i+1,j+1);
             scanf("%d", &matrix[i][j]);}}}
 
+//Заполнение матрицы рандомно
+void sozd_matrix_rand(int stroka, int stolb, int matrix[stroka][stolb]) {
+    for (int i = 0; i < stroka; i++) {
+        for (int j = 0; j < stolb; j++) {
+            int value = rand() % (100 + 1);
+            matrix[i][j] = value;}}}
+            
 //Поиск строки с мин. элементом
 int min_stroka(int stroka, int stolb, int matrix[stroka][stolb]){
     int znach = 9999999,strokar;
@@ -36,12 +43,18 @@ void vivod_matrix(int n,int m,int matrix[n][n]){
 
 
 int main() {
-    int n,m,stroka,stolb;
+    int n,m,stroka,stolb,var;
     printf("Введите количество строк и столбцов: ");
     scanf("%d %d", &n, &m);
     int matrix[n][m];
-
-    sozd_matrix(n,m,matrix);
+    printf("Введите вариант заполнения(1-рандом/2-пользователь): ");
+    scanf("%d", &var);
+    if (var == 2){sozd_matrix(n,m,matrix);
+        vivod_matrix(n,m,matrix);
+    }
+    else if (var == 1){sozd_matrix_rand(n,m,matrix);
+        vivod_matrix(n,m,matrix);
+    }
     stroka = min_stroka(n,m,matrix);
     stolb = min_stolb(n,m,matrix);
     
