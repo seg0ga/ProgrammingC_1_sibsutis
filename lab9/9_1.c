@@ -54,7 +54,9 @@ int main() {
     }
     else if (var == 1){sozd_matrix_rand(n,m,matrix);
         vivod_matrix(n,m,matrix);
-    }
+    } else{
+        printf("Неправильный номер варинта");
+        return 0;}
     stroka = min_stroka(n,m,matrix);
     stolb = min_stolb(n,m,matrix);
     
