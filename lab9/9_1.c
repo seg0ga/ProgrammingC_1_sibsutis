@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 //Заполнение матрицы с клавиантуры
 void sozd_matrix(int stroka, int stolb, int matrix[stroka][stolb]) {
@@ -43,6 +44,7 @@ void vivod_matrix(int n,int m,int matrix[n][n]){
 
 
 int main() {
+    srand(time(NULL));
     int n,m,stroka,stolb,var;
     printf("Введите количество строк и столбцов: ");
     scanf("%d %d", &n, &m);
